@@ -367,12 +367,13 @@ section {
 /* Footer */
 footer {
     padding: 3rem 1.5rem;
+    color: var(--text-white);
     border-top: 1px solid #eee;
     text-align: center;
     font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 0.2em;
-    opacity: 0.5;
+    background: var(--text-dark);
 }
 
 /* Untuk layar menengah / Tablet Landscape (di bawah 900px) */
