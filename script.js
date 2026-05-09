@@ -41,3 +41,17 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.stat-number[data-target]').forEach(num => {
     observer.observe(num);
 });
+
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+
+        // Tutup item lain yang mungkin sedang terbuka (opsional)
+        document.querySelectorAll('.faq-item').forEach(item => {
+            if (item !== faqItem) item.classList.remove('active');
+        });
+
+        // Toggle item yang diklik
+        faqItem.classList.toggle('active');
+    });
+});

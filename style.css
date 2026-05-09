@@ -11,6 +11,8 @@
     --text-main: #333333;
     --text-muted: #6B7280;
     --white: #ffffff;
+    --bg-img: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+
 }
 
 * {
@@ -30,6 +32,10 @@ body {
     line-height: 1.6;
 }
 
+img {
+    width: 100%;
+}
+
 a {
     text-decoration: none;
 }
@@ -47,7 +53,6 @@ nav {
 
 .nav-container {
     max-width: 1300px;
-    margin: 0 auto;
     /* Menambah padding atas-bawah dan kiri-kanan */
     display: flex;
     justify-content: space-between;
@@ -243,6 +248,122 @@ section {
     transform: scale(1.05);
 }
 
+/* --- GALLERY SECTION --- */
+.gallery-grid {
+    display: grid;
+    /* Kita gunakan nilai pasti 3 kolom untuk layar desktop */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    /* Membuat foto selalu berbentuk kotak (persegi) agar rapi */
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background-color: #f3f4f6;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* Transisi halus untuk efek hover */
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Efek zoom-in saat kursor diarahkan ke foto */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Sedikit penggelapan pada foto saat di-hover untuk kesan dramatis */
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.4s ease;
+    pointer-events: none;
+}
+
+.gallery-item:hover::after {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* --- FAQ SECTION --- */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--primary-green);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: white;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #f9fafb;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer p {
+    padding: 0 2rem 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--primary-green);
+    transition: transform 0.3s ease;
+}
+
+/* State Aktif (Saat Diklik) */
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    /* Atur sesuai kebutuhan tinggi teks */
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
 /* Footer */
 footer {
     padding: 3rem 1.5rem;
@@ -254,10 +375,24 @@ footer {
     opacity: 0.5;
 }
 
+/* Untuk layar menengah / Tablet Landscape (di bawah 900px) */
+@media (max-width: 900px) {
+    .gallery-grid {
+        /* Mengubah galeri menjadi 2 kolom agar foto tidak terlalu kecil */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        /* Sedikit merapatkan jarak antar foto */
+    }
+
+    .faq-container {
+        padding: 0 1rem;
+    }
+}
+
 /* Responsif untuk Mobile */
 @media (max-width: 768px) {
     .nav-container {
-        padding: 1rem 1.5rem;
+        padding: 0.6rem;
         justify-content: center;
     }
 
@@ -276,6 +411,25 @@ footer {
     .nav-container .nav-right {
         display: none;
     }
+
+    .gallery-grid {
+        gap: 1rem;
+    }
+
+    .gallery-item {
+        /* Mengurangi kebulatan sudut agar lebih proporsional di layar kecil */
+        border-radius: 1rem;
+    }
+
+    .faq-question {
+        padding: 1.2rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .faq-answer p {
+        padding: 0 1.5rem 1.2rem;
+        font-size: 0.85rem;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -285,11 +439,15 @@ footer {
     }
 
     .hero-left {
-        padding: 140px 1.5rem 60px;
+        padding: 140px 0 60px;
         /* Tambah padding atas untuk navbar fixed */
         min-height: auto;
         text-align: center;
         align-items: center;
+        background: url(https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=1200);
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
     }
 
     .hero-left h1 {
@@ -298,8 +456,7 @@ footer {
     }
 
     .hero-right {
-        width: 100%;
-        /* Tinggi gambar di HP */
+        display: none;
     }
 
     .info-badge {
@@ -310,24 +467,6 @@ footer {
     }
 
     .btn-group {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-left h1 {
-        font-size: 2rem !important;
-    }
-
-    .btn-group {
-        flex-direction: column;
-        /* Tombol tumpuk di layar sangat kecil */
-        width: 100%;
-    }
-
-    .btn-accent,
-    .btn-outline {
-        width: 100%;
         justify-content: center;
     }
 }
