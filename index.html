@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare. | Perawatan Hewan Minimalis</title>
+    <!-- Google Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR BARU -->
+    <nav class="fixed w-full z-50 p-6 glass">
+        <div class="nav-container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="logo">PETCARE<span style="color:var(--primary-green)">.</span></div>
+
+            <!-- Menu Tengah -->
+            <div class="nav-center-menu hidden md:block">
+                MENU
+            </div>
+
+            <!-- Action Kanan -->
+            <div class="nav-right">
+                <a href="#" class="btn-shop">
+                    Booking Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION SPLIT -->
+    <section class="hero-split">
+        <!-- Bagian Kiri (Teks) -->
+        <div class="hero-left">
+            <!-- Konten dibungkus agar max-width terjaga di desktop -->
+            <div style="max-width: 550px;">
+                <h1 style="font-size: 3.5rem; font-weight: 700; line-height: 1.1; margin-bottom: 2rem;">
+                    Perawatan Premium untuk Sahabat Setia Anda
+                </h1>
+                <p style="font-weight: 300; opacity: 0.85; margin-bottom: 2.5rem; font-size: 1.1rem;">
+                    Layanan kebersihan, kesehatan, dan penitipan hewan dengan standar medis demi kebahagiaan anabul
+                    Anda.
+                </p>
+
+                <div class="btn-group">
+                    <a href="#" class="btn-outline">PELAJARI LAYANAN ↗</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Kanan (Gambar) -->
+        <div class="hero-right">
+            <!-- Gambar stok yang responsif -->
+            <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=1200"
+                alt="Pet Image">
+
+            <!-- Floating Info Badge (Hanya muncul di desktop/tablet besar) -->
+            <div class="info-badge hidden sm:block">
+                <ul style="margin: 0; padding: 0;">
+                    <li style="margin-bottom: 8px;">Bahan pembersih alami & aman</li>
+                    <li style="margin-bottom: 8px;">Staf ahli bersertifikasi medis</li>
+                    <li>Laporan update foto & video</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS (With Animation Data) -->
+    <section id="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number" data-target="500">0</span>
+                <span class="stat-label">Anabul Terawat</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="12">0</span>
+                <span class="stat-label">Staf Ahli</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="100" data-suffix="%">0</span>
+                <span class="stat-label">Kepuasan Klien</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="4.9" data-decimal="true">0</span>
+                <span class="stat-label">Rating Google</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECTION: KENAPA HARUS KAMI -->
+    <section id="kenapa" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center md:text-left">
+            <h2 class="text-3xl font-bold mb-16 text-center">Keunggulan Layanan</h2>
+            <div class="grid md:grid-cols-3 gap-16">
+                <div class="space-y-4">
+                    <h3 class="text-xs font-bold text-emerald-600 uppercase tracking-[0.2em]">01. Higienitas</h3>
+                    <h4 class="text-xl font-bold text-gray-800">Fasilitas Steril</h4>
+                    <p class="text-gray-500 font-light leading-relaxed text-sm">Setiap peralatan dan area bermain
+                        dibersihkan secara berkala untuk kesehatan peliharaan Anda.</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-xs font-bold text-emerald-600 uppercase tracking-[0.2em]">02. Profesional</h3>
+                    <h4 class="text-xl font-bold text-gray-800">Staf Bersertifikat</h4>
+                    <p class="text-gray-500 font-light leading-relaxed text-sm">Tim kami terdiri dari pecinta hewan yang
+                        terlatih secara profesional dan memiliki sertifikasi grooming.</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-xs font-bold text-emerald-600 uppercase tracking-[0.2em]">03. Transparan</h3>
+                    <h4 class="text-xl font-bold text-gray-800">Update Berkala</h4>
+                    <p class="text-gray-500 font-light leading-relaxed text-sm">Kami mengirimkan laporan kondisi anabul
+                        Anda selama masa perawatan melalui WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECTION: LAYANAN & HARGA -->
+    <section id="layanan" class="py-24 px-6 bg-zinc-50/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold">Layanan Pilihan</h2>
+                <p class="text-gray-400 mt-4 font-light italic">Investasi terbaik untuk kenyamanan mereka</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Paket 1 -->
+                <div
+                    class="group p-10 rounded-[2.5rem] bg-white border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                    <h3 class="font-bold text-xl mb-2">Grooming</h3>
+                    <p class="text-3xl font-bold mb-6 tracking-tighter text-emerald-600">Rp 150k</p>
+                    <ul class="text-sm text-gray-500 space-y-4 mb-10 font-light">
+                        <li>• Mandi & Keramas</li>
+                        <li>• Potong Kuku</li>
+                        <li>• Bersihkan Telinga</li>
+                    </ul>
+                    <button
+                        class="w-full py-4 rounded-2xl font-bold text-xs uppercase tracking-widest border border-gray-200 hover:bg-gray-900 hover:text-white transition">Pilih
+                        Layanan</button>
+                </div>
+
+                <!-- Paket 2 (Utama) -->
+                <div class="relative p-10 rounded-[2.5rem] bg-gray-900 text-white shadow-2xl scale-105 z-10">
+                    <h3 class="font-bold text-xl mb-2 text-emerald-400">Full Spa</h3>
+                    <p class="text-3xl font-bold mb-6 tracking-tighter">Rp 300k</p>
+                    <ul class="text-sm text-gray-400 space-y-4 mb-10 font-light">
+                        <li>• Semua Fitur Grooming</li>
+                        <li>• Vitamin Bulu</li>
+                        <li>• Pijat Relaksasi</li>
+                    </ul>
+                    <button
+                        class="w-full py-4 bg-emerald-600 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-emerald-500 transition shadow-lg shadow-emerald-900/20">Booking
+                        Now</button>
+                </div>
+
+                <!-- Paket 3 -->
+                <div
+                    class="group p-10 rounded-[2.5rem] bg-white border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                    <h3 class="font-bold text-xl mb-2">Pet Hotel</h3>
+                    <p class="text-3xl font-bold mb-6 tracking-tighter text-emerald-600">Rp 200k</p>
+                    <ul class="text-sm text-gray-500 space-y-4 mb-10 font-light">
+                        <li>• Kamar Ber-AC</li>
+                        <li>• Makan 3x & Snack</li>
+                        <li>• Laporan Foto/Video</li>
+                    </ul>
+                    <button
+                        class="w-full py-4 rounded-2xl font-bold text-xs uppercase tracking-widest border border-gray-200 hover:bg-gray-900 hover:text-white transition">Pilih
+                        Layanan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECTION: TESTIMONI -->
+    <section id="testimoni" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-16">Apa Kata Mereka?</h2>
+            <p class="text-2xl md:text-3xl italic font-light leading-relaxed mb-10 text-gray-700">
+                "Tempat terbaik yang pernah saya kunjungi. Anabul saya pulang dengan wangi, rapi, dan yang paling
+                penting, mereka tidak stres sama sekali."
+            </p>
+            <div class="flex flex-col items-center">
+                <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Client"
+                    class="w-16 h-16 rounded-full mb-4 ring-4 ring-emerald-50">
+                <p class="font-bold text-xs uppercase tracking-[0.2em]">Citra Kirana</p>
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Pemilik Kucing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FOOTER -->
+    <footer class="py-12 border-t border-gray-100 bg-white">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center opacity-40 text-[10px] tracking-[0.3em] font-bold uppercase text-center md:text-left">
+            <p>PETCARE. — MEMBERIKAN CINTA DALAM SETIAP SENTUHAN</p>
+            <p class="mt-6 md:mt-0">© 2026 ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

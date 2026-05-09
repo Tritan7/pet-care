@@ -1,0 +1,318 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-green: #059669;
+    /* Emerald */
+    --accent-orange: #E67E22;
+    /* Warna kontras untuk tombol seperti di gambar */
+    --text-white: #ffffff;
+    --text-dark: #111827;
+    --text-main: #333333;
+    --text-muted: #6B7280;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    /* Menambah padding atas-bawah dan kiri-kanan */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-center-menu {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    /* Meregangkan jarak antar huruf pada kata MENU */
+    text-transform: uppercase;
+    color: var(--text-dark);
+    /* Memberikan flex-grow agar menu benar-benar berada di tengah dengan ruang luas */
+    flex: 1;
+    text-align: center;
+    margin-left: 100px;
+    /* Offset manual agar seimbang dengan area tombol kanan */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    /* Menambah jarak antara tombol Booking dan icon bulat */
+}
+
+.btn-shop {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem 2rem;
+    /* Memperlebar tombol agar tidak terlihat sesak */
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    /* Menambah jarak antara teks "Booking Now" dan panah */
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.btn-shop:hover {
+    border-color: var(--primary-green);
+    background-color: #f9fafb;
+}
+
+
+/* Hero Section Split Style */
+.hero-split {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 90vh;
+    padding: 0;
+    /* Menghilangkan padding agar full ke pinggir */
+    max-width: 100%;
+}
+
+.hero-left {
+    flex: 1;
+    background-color: var(--primary-green);
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10% 8%;
+    position: relative;
+    min-width: 50%;
+}
+
+.hero-right {
+    flex: 1;
+    background-color: #F9F9F7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50%;
+    position: relative;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* floating badge di atas gambar */
+.info-badge {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    font-size: 0.8rem;
+}
+
+.info-badge ul {
+    list-style: none;
+}
+
+.info-badge li::before {
+    content: "→";
+    color: var(--primary-green);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-outline {
+    background: var(--text-dark);
+    border: 2px solid transparent;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+/* Sections Global */
+section {
+    padding: 6rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+/* Stats Section */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 1px solid #f0f0f0;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Pricing Cards */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.price-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 2.5rem;
+    border: 1px solid #eee;
+    transition: 0.5s;
+}
+
+.price-card.featured {
+    background: #111;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    padding: 3rem 1.5rem;
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-center-menu {
+        display: none;
+        /* Sembunyikan kata MENU di layar kecil */
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-split {
+        flex-direction: column-reverse;
+        /* Tumpuk vertikal pada tablet/HP */
+    }
+
+    .hero-left {
+        padding: 140px 1.5rem 60px;
+        /* Tambah padding atas untuk navbar fixed */
+        min-height: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-left h1 {
+        font-size: 2.5rem !important;
+        /* Ukuran font lebih kecil di HP */
+    }
+
+    .hero-right {
+        min-height: 400px;
+        /* Tinggi gambar di HP */
+    }
+
+    .info-badge {
+        bottom: 20px;
+        right: 20px;
+        padding: 1rem;
+        font-size: 0.7rem;
+    }
+
+    .btn-group {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-left h1 {
+        font-size: 2rem !important;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        /* Tombol tumpuk di layar sangat kecil */
+        width: 100%;
+    }
+
+    .btn-accent,
+    .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+}
