@@ -202,3 +202,237 @@ if (toggleMonthly && toggleYearly) {
         }, 150);
     });
 }
+
+// GSAP Entrance Animations
+const initGSAPAnimations = () => {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Helper to disable CSS transitions during GSAP animation
+    const disableTransitions = (elements) => {
+        elements.forEach(el => {
+            if (el && el.style) el.style.transition = 'none';
+        });
+    };
+
+    const enableTransitions = (elements) => {
+        elements.forEach(el => {
+            if (el && el.style) el.style.transition = '';
+        });
+    };
+
+    // Hero Section
+    const heroSection = document.querySelector('section.pt-40');
+    if (heroSection) {
+        const heroTitle = heroSection.querySelector('h1');
+        const heroButtons = heroSection.querySelector('.flex.flex-col');
+        const heroImages = heroSection.querySelectorAll('.grid-cols-1.md\\:grid-cols-3 > div');
+        const heroFeatures = heroSection.querySelectorAll('.grid-cols-1.sm\\:grid-cols-2 > div');
+
+        disableTransitions(heroImages);
+        disableTransitions(heroFeatures);
+
+        const tl = gsap.timeline();
+        if (heroTitle) {
+            tl.from(heroTitle, { y: 50, opacity: 0, duration: 1, ease: "back.out(1.7)" });
+        }
+        if (heroButtons) {
+            tl.from(heroButtons, { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.5");
+        }
+        if (heroImages.length) {
+            tl.from(heroImages, { 
+                y: 100, opacity: 0, duration: 0.8, stagger: 0.2, ease: "back.out(1.2)",
+                onComplete: () => enableTransitions(heroImages)
+            }, "-=0.4");
+        }
+        if (heroFeatures.length) {
+            tl.from(heroFeatures, { 
+                y: 30, opacity: 0, duration: 0.6, stagger: 0.1, ease: "power2.out",
+                onComplete: () => enableTransitions(heroFeatures)
+            }, "-=0.2");
+        }
+    }
+
+    // Stats Section
+    const statItems = document.querySelectorAll('.stat-item');
+    if (statItems.length) {
+        disableTransitions(statItems);
+        gsap.from(statItems, {
+            scrollTrigger: {
+                trigger: '#stats',
+                start: "top 85%",
+            },
+            y: 40,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "back.out(1.5)",
+            onComplete: () => enableTransitions(statItems)
+        });
+    }
+
+    // Services Section
+    const serviceTitle = document.querySelector('#services h2');
+    const serviceCards = document.querySelectorAll('#services .grid > div');
+    if (serviceTitle) {
+        gsap.from(serviceTitle, {
+            scrollTrigger: { trigger: '#services', start: "top 85%" },
+            y: 30,
+            opacity: 0,
+            duration: 0.8
+        });
+    }
+    if (serviceCards.length) {
+        disableTransitions(serviceCards);
+        gsap.from(serviceCards, {
+            scrollTrigger: { trigger: '#services', start: "top 75%" },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: "power3.out",
+            onComplete: () => enableTransitions(serviceCards)
+        });
+    }
+
+    // Pricing Section
+    const pricingHeader = document.querySelector('#pricing .flex-col.items-center');
+    const pricingCards = document.querySelectorAll('#pricing .grid > div');
+    if (pricingHeader) {
+        gsap.from(pricingHeader, {
+            scrollTrigger: { trigger: '#pricing', start: "top 85%" },
+            y: 30,
+            opacity: 0,
+            duration: 0.8
+        });
+    }
+    if (pricingCards.length) {
+        disableTransitions(pricingCards);
+        gsap.from(pricingCards, {
+            scrollTrigger: { trigger: '#pricing', start: "top 75%" },
+            y: 50,
+            scale: 0.95,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "back.out(1.2)",
+            onComplete: () => enableTransitions(pricingCards)
+        });
+    }
+
+    // Gallery Section
+    const galleryTitle = document.querySelector('#gallery h2');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    if (galleryTitle) {
+        gsap.from(galleryTitle, {
+            scrollTrigger: { trigger: '#gallery', start: "top 85%" },
+            y: 30,
+            opacity: 0,
+            duration: 0.8
+        });
+    }
+    if (galleryItems.length) {
+        disableTransitions(galleryItems);
+        gsap.from(galleryItems, {
+            scrollTrigger: { trigger: '#gallery', start: "top 75%" },
+            scale: 0.8,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "back.out(1.5)",
+            onComplete: () => enableTransitions(galleryItems)
+        });
+    }
+
+    // Testimonials
+    const testiContainer = document.querySelector('#testimonials .flex-col.md\\:flex-row');
+    if (testiContainer && testiContainer.children.length >= 2) {
+        const testiLeft = testiContainer.children[0];
+        const testiRight = testiContainer.children[1];
+        
+        gsap.from(testiLeft, {
+            scrollTrigger: { trigger: '#testimonials', start: "top 75%" },
+            x: -50,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        });
+        gsap.from(testiRight, {
+            scrollTrigger: { trigger: '#testimonials', start: "top 75%" },
+            x: 50,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out",
+            delay: 0.2
+        });
+    }
+
+    // FAQ
+    const faqTitle = document.querySelector('#faq h2');
+    const faqItems = document.querySelectorAll('.faq-item');
+    const faqImage = document.querySelector('#faq .lg\\:w-1\\/2.relative');
+    if (faqTitle) {
+        gsap.from(faqTitle, {
+            scrollTrigger: { trigger: '#faq', start: "top 85%" },
+            y: 30,
+            opacity: 0,
+            duration: 0.8
+        });
+    }
+    if (faqItems.length) {
+        disableTransitions(faqItems);
+        gsap.from(faqItems, {
+            scrollTrigger: { trigger: '#faq', start: "top 75%" },
+            x: -30,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power2.out",
+            onComplete: () => enableTransitions(faqItems)
+        });
+    }
+    if (faqImage) {
+        gsap.from(faqImage, {
+            scrollTrigger: { trigger: '#faq', start: "top 75%" },
+            scale: 0.9,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        });
+    }
+
+    // CTA
+    const faqSection = document.querySelector('#faq');
+    const ctaSection = faqSection ? faqSection.nextElementSibling : null;
+    if (ctaSection) {
+        const ctaBanner = ctaSection.firstElementChild;
+        if (ctaBanner) {
+            gsap.from(ctaBanner, {
+                scrollTrigger: { trigger: ctaSection, start: "top 85%" },
+                y: 50,
+                scale: 0.95,
+                opacity: 0,
+                duration: 1,
+                ease: "back.out(1.2)"
+            });
+        }
+    }
+
+    // Footer
+    const footer = document.querySelector('footer');
+    if (footer) {
+        gsap.from(footer.children[0], {
+            scrollTrigger: { trigger: footer, start: "top 90%" },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        });
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Wait slightly to ensure layouts are stable before triggering animations
+    setTimeout(initGSAPAnimations, 100);
+});
