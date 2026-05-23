@@ -129,3 +129,76 @@ document.getElementById('next-testimonial')?.addEventListener('click', () => {
     currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
     updateTestimonial(currentTestimonialIndex);
 });
+
+// Pricing Toggle Logic
+const toggleMonthly = document.getElementById('toggle-monthly');
+const toggleYearly = document.getElementById('toggle-yearly');
+
+const priceFriendly = document.getElementById('price-friendly');
+const priceFamily = document.getElementById('price-family');
+const priceExclusive = document.getElementById('price-exclusive');
+
+const suffixFriendly = document.getElementById('suffix-friendly');
+const suffixFamily = document.getElementById('suffix-family');
+const suffixExclusive = document.getElementById('suffix-exclusive');
+
+if (toggleMonthly && toggleYearly) {
+    const activeClasses = ['bg-[#111827]', 'text-white', 'shadow-md'];
+    const inactiveClasses = ['text-gray-500', 'hover:text-gray-900'];
+
+    toggleMonthly.addEventListener('click', () => {
+        // Style changes
+        toggleMonthly.classList.remove(...inactiveClasses);
+        toggleMonthly.classList.add(...activeClasses);
+        
+        toggleYearly.classList.remove(...activeClasses);
+        toggleYearly.classList.add(...inactiveClasses);
+
+        // Value changes (Monthly)
+        priceFriendly.style.opacity = 0;
+        priceFamily.style.opacity = 0;
+        priceExclusive.style.opacity = 0;
+        
+        setTimeout(() => {
+            priceFriendly.innerText = '150k';
+            priceFamily.innerText = '200k';
+            priceExclusive.innerText = '300k';
+
+            suffixFriendly.innerText = '/visit';
+            suffixFamily.innerText = '/visit';
+            suffixExclusive.innerText = '/visit';
+
+            priceFriendly.style.opacity = 1;
+            priceFamily.style.opacity = 1;
+            priceExclusive.style.opacity = 1;
+        }, 150);
+    });
+
+    toggleYearly.addEventListener('click', () => {
+        // Style changes
+        toggleYearly.classList.remove(...inactiveClasses);
+        toggleYearly.classList.add(...activeClasses);
+        
+        toggleMonthly.classList.remove(...activeClasses);
+        toggleMonthly.classList.add(...inactiveClasses);
+
+        // Value changes (Yearly)
+        priceFriendly.style.opacity = 0;
+        priceFamily.style.opacity = 0;
+        priceExclusive.style.opacity = 0;
+        
+        setTimeout(() => {
+            priceFriendly.innerText = '1.5M';
+            priceFamily.innerText = '2M';
+            priceExclusive.innerText = '3M';
+
+            suffixFriendly.innerText = '/year';
+            suffixFamily.innerText = '/year';
+            suffixExclusive.innerText = '/year';
+
+            priceFriendly.style.opacity = 1;
+            priceFamily.style.opacity = 1;
+            priceExclusive.style.opacity = 1;
+        }, 150);
+    });
+}
