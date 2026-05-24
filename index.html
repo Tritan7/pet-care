@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,7 +21,12 @@
         <div class="max-w-[1440px] mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
             <!-- Logo -->
             <a class="flex items-center gap-2" href="#">
-                <img src="images/logo.png" alt="PetCare Logo" class="h-12 w-12 rounded-full object-cover" />
+                <svg class="w-8 h-8 text-[#b8db3a] fill-current" viewBox="0 0 24 24">
+                    <path
+                        d="M12 14c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm-5.5-3c-.83 0-1.5-.67-1.5-1.5S5.67 8 6.5 8s1.5.67 1.5 1.5S7.33 11 6.5 11zm11 0c-.83 0-1.5-.67-1.5-1.5S16.67 8 17.5 8s1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5z" />
+                </svg>
+                <span class="font-extrabold text-[#b8db3a] text-3xl tracking-tight"
+                    style="font-family: 'Google Sans', sans-serif;">PETCARE.</span>
             </a>
 
             <!-- Menu Tengah -->
@@ -38,7 +43,7 @@
             <div class="hidden lg:flex items-center">
                 <a href="#booking"
                     class="text-gray-700 text-sm font-medium flex items-center hover:text-[#b1c73a] transition">
-                    Booking Now
+                    Contact
                     <span
                         class="ml-2 bg-[#b1c73a] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
                         &rarr;
@@ -62,7 +67,7 @@
     <section class="pt-40 pb-16 px-4 bg-white text-center">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-5xl md:text-[5rem] font-extrabold tracking-tight text-gray-900 leading-[1.1] mb-8"
-                style="font-family: Arial, sans-serif;">
+                style="font-family: 'Google Sans', sans-serif;">
                 Unwavering Pet Care<br />
                 For Your Furry Friend<br />
                 Everyday, All Day!
@@ -176,24 +181,23 @@
     <section id="services" class="py-24 bg-white">
         <div class="max-w-[1440px] mx-auto px-4 md:px-6">
             <h2 class="text-4xl md:text-5xl lg:text-[3.5rem] font-black mb-16 text-center text-gray-900 tracking-tight"
-                style="font-family: Arial, sans-serif;">Services We Provide</h2>
+                style="font-family: 'Google Sans', sans-serif;">Services We Provide</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Card 1: Grooming -->
                 <div
-                    class="bg-[#f9f9f9] hover:bg-[#b8db3a] rounded-[2rem] p-3 flex flex-col h-full group hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 hover:border-transparent relative overflow-hidden">
+                    class="bg-[#f9f9f9] rounded-[2rem] p-3 flex flex-col h-full group hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 hover:border-transparent relative overflow-hidden">
                     <div
-                        class="relative w-full aspect-square rounded-[1.5rem] overflow-hidden mb-6 group-hover:bg-[#b8db3a] transition-colors duration-500">
+                        class="relative w-full aspect-square rounded-[1.5rem] overflow-hidden mb-6 transition-colors duration-500">
                         <img src="images/service_grooming_1779366506622.png" alt="Grooming"
-                            class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:opacity-60 group-hover:mix-blend-multiply group-hover:grayscale-[30%] group-hover:scale-105">
+                            class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
                         <div
-                            class="absolute bottom-4 left-4 bg-white group-hover:opacity-0 pointer-events-none rounded-full px-4 py-2 flex items-center gap-2 shadow-sm transition-all duration-500">
-                            <div
-                                class="w-3 h-3 rounded-full bg-pink-500 group-hover:bg-black/20 transition-colors duration-500">
+                            class="absolute bottom-4 left-4 bg-white pointer-events-none rounded-full px-4 py-2 flex items-center gap-2 shadow-sm transition-all duration-500">
+                            <div class="w-3 h-3 rounded-full bg-pink-500 transition-colors duration-500">
                             </div>
                             <span
-                                class="font-bold text-gray-900 group-hover:text-gray-800/80 text-sm tracking-wide transition-colors duration-500">Grooming</span>
+                                class="font-bold text-gray-900 text-sm tracking-wide transition-colors duration-500">Grooming</span>
                         </div>
                     </div>
                     <div class="px-4 pb-4 flex-grow flex flex-col relative z-20">
@@ -203,17 +207,14 @@
                         </p>
                         <div
                             class="absolute bottom-4 left-4 right-4 translate-y-[150%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end pointer-events-none group-hover:pointer-events-auto">
-                            <h4 class="text-[1.15rem] font-black text-gray-900 mb-1.5 tracking-tight drop-shadow-sm">
-                                Grooming
-                            </h4>
                             <a href="#"
-                                class="flex items-center justify-between w-full bg-white rounded-full px-4 py-2 font-bold text-gray-900 text-[13px] shadow-sm hover:scale-[1.02] transition-transform">
+                                class="flex items-center justify-between w-full bg-[#b8db3a] rounded-full p-2 pl-6 font-bold text-gray-900 text-lg shadow-sm hover:scale-[1.02] transition-transform">
                                 Contact Now
                                 <div
-                                    class="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center text-white">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M9 5l7 7-7 7"></path>
+                                            d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
                             </a>
@@ -223,18 +224,17 @@
 
                 <!-- Card 2: Training -->
                 <div
-                    class="bg-[#f9f9f9] hover:bg-[#b8db3a] rounded-[2rem] p-3 flex flex-col h-full group hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 hover:border-transparent relative overflow-hidden">
+                    class="bg-[#f9f9f9] rounded-[2rem] p-3 flex flex-col h-full group hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 hover:border-transparent relative overflow-hidden">
                     <div
-                        class="relative w-full aspect-square rounded-[1.5rem] overflow-hidden mb-6 group-hover:bg-[#b8db3a] transition-colors duration-500">
+                        class="relative w-full aspect-square rounded-[1.5rem] overflow-hidden mb-6 transition-colors duration-500">
                         <img src="images/service_training_1779366524618.png" alt="Training"
-                            class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:opacity-60 group-hover:mix-blend-multiply group-hover:grayscale-[30%] group-hover:scale-105">
+                            class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
                         <div
-                            class="absolute bottom-4 left-4 bg-white group-hover:opacity-0 pointer-events-none rounded-full px-4 py-2 flex items-center gap-2 shadow-sm transition-all duration-500">
-                            <div
-                                class="w-3 h-3 rounded-full bg-pink-500 group-hover:bg-black/20 transition-colors duration-500">
+                            class="absolute bottom-4 left-4 bg-white pointer-events-none rounded-full px-4 py-2 flex items-center gap-2 shadow-sm transition-all duration-500">
+                            <div class="w-3 h-3 rounded-full bg-pink-500 transition-colors duration-500">
                             </div>
                             <span
-                                class="font-bold text-gray-900 group-hover:text-gray-800/80 text-sm tracking-wide transition-colors duration-500">Training</span>
+                                class="font-bold text-gray-900 text-sm tracking-wide transition-colors duration-500">Training</span>
                         </div>
                     </div>
                     <div class="px-4 pb-4 flex-grow flex flex-col relative z-20">
@@ -245,17 +245,14 @@
                         </p>
                         <div
                             class="absolute bottom-4 left-4 right-4 translate-y-[150%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end pointer-events-none group-hover:pointer-events-auto">
-                            <h4 class="text-[1.15rem] font-black text-gray-900 mb-1.5 tracking-tight drop-shadow-sm">
-                                Training
-                            </h4>
                             <a href="#"
-                                class="flex items-center justify-between w-full bg-white rounded-full px-4 py-2 font-bold text-gray-900 text-[13px] shadow-sm hover:scale-[1.02] transition-transform">
+                                class="flex items-center justify-between w-full bg-[#b8db3a] rounded-full p-2 pl-6 font-bold text-gray-900 text-lg shadow-sm hover:scale-[1.02] transition-transform">
                                 Contact Now
                                 <div
-                                    class="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center text-white">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M9 5l7 7-7 7"></path>
+                                            d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
                             </a>
@@ -265,18 +262,17 @@
 
                 <!-- Card 3: Transportation -->
                 <div
-                    class="bg-[#f9f9f9] hover:bg-[#b8db3a] rounded-[2rem] p-3 flex flex-col h-full group hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 hover:border-transparent relative overflow-hidden">
+                    class="bg-[#f9f9f9] rounded-[2rem] p-3 flex flex-col h-full group hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 hover:border-transparent relative overflow-hidden">
                     <div
-                        class="relative w-full aspect-square rounded-[1.5rem] overflow-hidden mb-6 group-hover:bg-[#b8db3a] transition-colors duration-500">
+                        class="relative w-full aspect-square rounded-[1.5rem] overflow-hidden mb-6 transition-colors duration-500">
                         <img src="images/service_transport_1779366541099.png" alt="Transportation"
-                            class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:opacity-60 group-hover:mix-blend-multiply group-hover:grayscale-[30%] group-hover:scale-105">
+                            class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
                         <div
-                            class="absolute bottom-4 left-4 bg-white group-hover:opacity-0 pointer-events-none rounded-full px-4 py-2 flex items-center gap-2 shadow-sm transition-all duration-500">
-                            <div
-                                class="w-3 h-3 rounded-full bg-pink-500 group-hover:bg-black/20 transition-colors duration-500">
+                            class="absolute bottom-4 left-4 bg-white pointer-events-none rounded-full px-4 py-2 flex items-center gap-2 shadow-sm transition-all duration-500">
+                            <div class="w-3 h-3 rounded-full bg-pink-500 transition-colors duration-500">
                             </div>
                             <span
-                                class="font-bold text-gray-900 group-hover:text-gray-800/80 text-sm tracking-wide transition-colors duration-500">Transportation</span>
+                                class="font-bold text-gray-900 text-sm tracking-wide transition-colors duration-500">Transportation</span>
                         </div>
                     </div>
                     <div class="px-4 pb-4 flex-grow flex flex-col relative z-20">
@@ -287,16 +283,14 @@
                         </p>
                         <div
                             class="absolute bottom-4 left-4 right-4 translate-y-[150%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end pointer-events-none group-hover:pointer-events-auto">
-                            <h4 class="text-[1.15rem] font-black text-gray-900 mb-1.5 tracking-tight drop-shadow-sm">
-                                Transportation</h4>
                             <a href="#"
-                                class="flex items-center justify-between w-full bg-white rounded-full px-4 py-2 font-bold text-gray-900 text-[13px] shadow-sm hover:scale-[1.02] transition-transform">
+                                class="flex items-center justify-between w-full bg-[#b8db3a] rounded-full p-2 pl-6 font-bold text-gray-900 text-lg shadow-sm hover:scale-[1.02] transition-transform">
                                 Contact Now
                                 <div
-                                    class="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center text-white">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M9 5l7 7-7 7"></path>
+                                            d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
                             </a>
@@ -306,18 +300,17 @@
 
                 <!-- Card 4: Dog Boarding -->
                 <div
-                    class="bg-[#f9f9f9] hover:bg-[#b8db3a] rounded-[2rem] p-3 flex flex-col h-full group hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 hover:border-transparent relative overflow-hidden">
+                    class="bg-[#f9f9f9] rounded-[2rem] p-3 flex flex-col h-full group hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 hover:border-transparent relative overflow-hidden">
                     <div
-                        class="relative w-full aspect-square rounded-[1.5rem] overflow-hidden mb-6 group-hover:bg-[#b8db3a] transition-colors duration-500">
+                        class="relative w-full aspect-square rounded-[1.5rem] overflow-hidden mb-6 transition-colors duration-500">
                         <img src="images/service_dog_boarding_1779366561643.png" alt="Dog Boarding"
-                            class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:opacity-60 group-hover:mix-blend-multiply group-hover:grayscale-[30%] group-hover:scale-105">
+                            class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
                         <div
-                            class="absolute bottom-4 left-4 bg-white group-hover:opacity-0 pointer-events-none rounded-full px-4 py-2 flex items-center gap-2 shadow-sm transition-all duration-500">
-                            <div
-                                class="w-3 h-3 rounded-full bg-pink-500 group-hover:bg-black/20 transition-colors duration-500">
+                            class="absolute bottom-4 left-4 bg-white pointer-events-none rounded-full px-4 py-2 flex items-center gap-2 shadow-sm transition-all duration-500">
+                            <div class="w-3 h-3 rounded-full bg-pink-500 transition-colors duration-500">
                             </div>
                             <span
-                                class="font-bold text-gray-900 group-hover:text-gray-800/80 text-sm tracking-wide transition-colors duration-500">Dog
+                                class="font-bold text-gray-900 text-sm tracking-wide transition-colors duration-500">Dog
                                 Boarding</span>
                         </div>
                     </div>
@@ -329,16 +322,14 @@
                         </p>
                         <div
                             class="absolute bottom-4 left-4 right-4 translate-y-[150%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end pointer-events-none group-hover:pointer-events-auto">
-                            <h4 class="text-[1.15rem] font-black text-gray-900 mb-1.5 tracking-tight drop-shadow-sm">Dog
-                                Boarding</h4>
                             <a href="#"
-                                class="flex items-center justify-between w-full bg-white rounded-full px-4 py-2 font-bold text-gray-900 text-[13px] shadow-sm hover:scale-[1.02] transition-transform">
+                                class="flex items-center justify-between w-full bg-[#b8db3a] rounded-full p-2 pl-6 font-bold text-gray-900 text-lg shadow-sm hover:scale-[1.02] transition-transform">
                                 Contact Now
                                 <div
-                                    class="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center text-white">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M9 5l7 7-7 7"></path>
+                                            d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
                             </a>
@@ -348,18 +339,17 @@
 
                 <!-- Card 5: Cat Boarding -->
                 <div
-                    class="bg-[#f9f9f9] hover:bg-[#b8db3a] rounded-[2rem] p-3 flex flex-col h-full group hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 hover:border-transparent relative overflow-hidden">
+                    class="bg-[#f9f9f9] rounded-[2rem] p-3 flex flex-col h-full group hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 hover:border-transparent relative overflow-hidden">
                     <div
-                        class="relative w-full aspect-square rounded-[1.5rem] overflow-hidden mb-6 group-hover:bg-[#b8db3a] transition-colors duration-500">
+                        class="relative w-full aspect-square rounded-[1.5rem] overflow-hidden mb-6 transition-colors duration-500">
                         <img src="images/service_cat_boarding_1779366578410.png" alt="Cat Boarding"
-                            class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:opacity-60 group-hover:mix-blend-multiply group-hover:grayscale-[30%] group-hover:scale-105">
+                            class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
                         <div
-                            class="absolute bottom-4 left-4 bg-white group-hover:opacity-0 pointer-events-none rounded-full px-4 py-2 flex items-center gap-2 shadow-sm transition-all duration-500">
-                            <div
-                                class="w-3 h-3 rounded-full bg-pink-500 group-hover:bg-black/20 transition-colors duration-500">
+                            class="absolute bottom-4 left-4 bg-white pointer-events-none rounded-full px-4 py-2 flex items-center gap-2 shadow-sm transition-all duration-500">
+                            <div class="w-3 h-3 rounded-full bg-pink-500 transition-colors duration-500">
                             </div>
                             <span
-                                class="font-bold text-gray-900 group-hover:text-gray-800/80 text-sm tracking-wide transition-colors duration-500">Cat
+                                class="font-bold text-gray-900 text-sm tracking-wide transition-colors duration-500">Cat
                                 Boarding</span>
                         </div>
                     </div>
@@ -371,16 +361,14 @@
                         </p>
                         <div
                             class="absolute bottom-4 left-4 right-4 translate-y-[150%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end pointer-events-none group-hover:pointer-events-auto">
-                            <h4 class="text-[1.15rem] font-black text-gray-900 mb-1.5 tracking-tight drop-shadow-sm">Cat
-                                Boarding</h4>
                             <a href="#"
-                                class="flex items-center justify-between w-full bg-white rounded-full px-4 py-2 font-bold text-gray-900 text-[13px] shadow-sm hover:scale-[1.02] transition-transform">
+                                class="flex items-center justify-between w-full bg-[#b8db3a] rounded-full p-2 pl-6 font-bold text-gray-900 text-lg shadow-sm hover:scale-[1.02] transition-transform">
                                 Contact Now
                                 <div
-                                    class="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center text-white">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M9 5l7 7-7 7"></path>
+                                            d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
                             </a>
@@ -390,18 +378,17 @@
 
                 <!-- Card 6: Day Care -->
                 <div
-                    class="bg-[#f9f9f9] hover:bg-[#b8db3a] rounded-[2rem] p-3 flex flex-col h-full group hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 hover:border-transparent relative overflow-hidden">
+                    class="bg-[#f9f9f9] rounded-[2rem] p-3 flex flex-col h-full group hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 hover:border-transparent relative overflow-hidden">
                     <div
-                        class="relative w-full aspect-square rounded-[1.5rem] overflow-hidden mb-6 group-hover:bg-[#b8db3a] transition-colors duration-500">
+                        class="relative w-full aspect-square rounded-[1.5rem] overflow-hidden mb-6 transition-colors duration-500">
                         <img src="images/service_daycare_1779366596322.png" alt="Day Care"
-                            class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:opacity-60 group-hover:mix-blend-multiply group-hover:grayscale-[30%] group-hover:scale-105">
+                            class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
                         <div
-                            class="absolute bottom-4 left-4 bg-white group-hover:opacity-0 pointer-events-none rounded-full px-4 py-2 flex items-center gap-2 shadow-sm transition-all duration-500">
-                            <div
-                                class="w-3 h-3 rounded-full bg-pink-500 group-hover:bg-black/20 transition-colors duration-500">
+                            class="absolute bottom-4 left-4 bg-white pointer-events-none rounded-full px-4 py-2 flex items-center gap-2 shadow-sm transition-all duration-500">
+                            <div class="w-3 h-3 rounded-full bg-pink-500 transition-colors duration-500">
                             </div>
                             <span
-                                class="font-bold text-gray-900 group-hover:text-gray-800/80 text-sm tracking-wide transition-colors duration-500">Day
+                                class="font-bold text-gray-900 text-sm tracking-wide transition-colors duration-500">Day
                                 Care</span>
                         </div>
                     </div>
@@ -413,17 +400,14 @@
                         </p>
                         <div
                             class="absolute bottom-4 left-4 right-4 translate-y-[150%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end pointer-events-none group-hover:pointer-events-auto">
-                            <h4 class="text-[1.15rem] font-black text-gray-900 mb-1.5 tracking-tight drop-shadow-sm">Day
-                                Care
-                            </h4>
                             <a href="#"
-                                class="flex items-center justify-between w-full bg-white rounded-full px-4 py-2 font-bold text-gray-900 text-[13px] shadow-sm hover:scale-[1.02] transition-transform">
+                                class="flex items-center justify-between w-full bg-[#b8db3a] rounded-full p-2 pl-6 font-bold text-gray-900 text-lg shadow-sm hover:scale-[1.02] transition-transform">
                                 Contact Now
                                 <div
-                                    class="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center text-white">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M9 5l7 7-7 7"></path>
+                                            d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
                             </a>
@@ -442,7 +426,7 @@
             <div class="flex flex-col items-center mb-16 gap-8 text-center">
                 <div>
                     <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight"
-                        style="font-family: Arial, sans-serif;">Plans & pricing</h2>
+                        style="font-family: 'Google Sans', sans-serif;">Plans & Pricing</h2>
                     <p class="text-gray-500 text-base md:text-lg leading-relaxed max-w-md mx-auto">We offer a special
                         package
                         just for you and your love family.</p>
@@ -536,7 +520,80 @@
                         now</button>
                 </div>
 
-                <!-- Card 2: Family Pack -->
+                <!-- Card 2: Exclusive Pack (Highlighted) -->
+                <div
+                    class="bg-[#111827] rounded-[2rem] p-8 lg:p-10 md:scale-105 flex flex-col justify-between shadow-2xl relative z-10 border border-gray-800">
+                    <div>
+                        <h3 class="text-center font-bold text-white text-xl mb-4">Exclusive pack</h3>
+                        <div class="text-center flex justify-center items-end gap-1 mb-6 text-white">
+                            <span class="text-2xl font-bold mb-1">Rp</span>
+                            <span
+                                class="text-6xl font-black tracking-tighter text-[#b8db3a] transition-all duration-300"
+                                id="price-exclusive">300k</span>
+                            <span class="text-sm font-medium text-gray-400 mb-2 transition-all duration-300"
+                                id="suffix-exclusive">/visit</span>
+                        </div>
+                        <hr class="w-12 border-t-2 border-gray-700 mx-auto mb-10">
+
+                        <ul class="space-y-5 mb-10">
+                            <li class="flex items-center gap-4 text-[15px] text-gray-300 font-medium">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-[#b8db3a] flex items-center justify-center shrink-0 text-[#111827]">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                All Family Features
+                            </li>
+                            <li class="flex items-center gap-4 text-[15px] text-gray-300 font-medium">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-[#b8db3a] flex items-center justify-center shrink-0 text-[#111827]">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                Premium Fur Vitamin
+                            </li>
+                            <li class="flex items-center gap-4 text-[15px] text-gray-300 font-medium">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-[#b8db3a] flex items-center justify-center shrink-0 text-[#111827]">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                Relaxation Massage
+                            </li>
+                            <li class="flex items-center gap-4 text-[15px] text-gray-300 font-medium">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-[#b8db3a] flex items-center justify-center shrink-0 text-[#111827]">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                Free Pick-up & Drop-off
+                            </li>
+                            <li class="flex items-center gap-4 text-[15px] text-gray-300 font-medium">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-[#b8db3a] flex items-center justify-center shrink-0 text-[#111827]">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                Pet Park & Games
+                            </li>
+                        </ul>
+                    </div>
+                    <button
+                        class="w-full py-3.5 bg-white text-[#111827] rounded-full font-bold transition-all text-[15px] mt-auto shadow-md">Buy
+                        now</button>
+                </div>
+
+                <!-- Card 3: Family Pack -->
                 <div
                     class="border border-gray-200 rounded-[2rem] p-8 lg:p-10 flex flex-col justify-between bg-white shadow-sm hover:shadow-md transition-shadow">
                     <div>
@@ -612,79 +669,6 @@
                         class="w-full py-3.5 rounded-full border-2 border-gray-200 text-gray-900 font-bold hover:bg-[#111827] hover:border-[#111827] hover:text-white transition-all text-[15px] mt-auto">Buy
                         now</button>
                 </div>
-
-                <!-- Card 3: Exclusive Pack (Highlighted) -->
-                <div
-                    class="bg-[#111827] rounded-[2rem] p-8 lg:p-10 md:scale-105 flex flex-col justify-between shadow-2xl relative z-10 border border-gray-800">
-                    <div>
-                        <h3 class="text-center font-bold text-white text-xl mb-4">Exclusive pack</h3>
-                        <div class="text-center flex justify-center items-end gap-1 mb-6 text-white">
-                            <span class="text-2xl font-bold mb-1">Rp</span>
-                            <span
-                                class="text-6xl font-black tracking-tighter text-[#b8db3a] transition-all duration-300"
-                                id="price-exclusive">300k</span>
-                            <span class="text-sm font-medium text-gray-400 mb-2 transition-all duration-300"
-                                id="suffix-exclusive">/visit</span>
-                        </div>
-                        <hr class="w-12 border-t-2 border-gray-700 mx-auto mb-10">
-
-                        <ul class="space-y-5 mb-10">
-                            <li class="flex items-center gap-4 text-[15px] text-gray-300 font-medium">
-                                <div
-                                    class="w-6 h-6 rounded-full bg-[#b8db3a] flex items-center justify-center shrink-0 text-[#111827]">
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                All Family Features
-                            </li>
-                            <li class="flex items-center gap-4 text-[15px] text-gray-300 font-medium">
-                                <div
-                                    class="w-6 h-6 rounded-full bg-[#b8db3a] flex items-center justify-center shrink-0 text-[#111827]">
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                Premium Fur Vitamin
-                            </li>
-                            <li class="flex items-center gap-4 text-[15px] text-gray-300 font-medium">
-                                <div
-                                    class="w-6 h-6 rounded-full bg-[#b8db3a] flex items-center justify-center shrink-0 text-[#111827]">
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                Relaxation Massage
-                            </li>
-                            <li class="flex items-center gap-4 text-[15px] text-gray-300 font-medium">
-                                <div
-                                    class="w-6 h-6 rounded-full bg-[#b8db3a] flex items-center justify-center shrink-0 text-[#111827]">
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                Free Pick-up & Drop-off
-                            </li>
-                            <li class="flex items-center gap-4 text-[15px] text-gray-300 font-medium">
-                                <div
-                                    class="w-6 h-6 rounded-full bg-[#b8db3a] flex items-center justify-center shrink-0 text-[#111827]">
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                Pet Park & Games
-                            </li>
-                        </ul>
-                    </div>
-                    <button
-                        class="w-full py-3.5 bg-white text-[#111827] rounded-full font-bold hover:bg-[#b8db3a] transition-all text-[15px] mt-auto shadow-md">Buy
-                        now</button>
-                </div>
             </div>
         </div>
     </section>
@@ -757,7 +741,7 @@
             <div class="md:w-1/2 pl-0 md:pl-4">
                 <h3 class="text-[#b8db3a] uppercase tracking-[0.2em] text-sm font-bold mb-4">Testimonials</h3>
                 <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight"
-                    style="font-family: Arial, sans-serif;">
+                    style="font-family: 'Google Sans', sans-serif;">
                     What Our Client's<br>Have To Say!
                 </h2>
 
@@ -801,14 +785,14 @@
 
                 <div class="flex gap-4 mt-10">
                     <button id="prev-testimonial"
-                        class="w-12 h-12 bg-[#1b0a2c] text-white rounded-full flex items-center justify-center hover:bg-[#b8db3a] transition-colors focus:outline-none">
+                        class="w-12 h-12 bg-[#1b0a2c] text-white rounded-full flex items-center justify-center transition-colors focus:outline-none">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
                             </path>
                         </svg>
                     </button>
                     <button id="next-testimonial"
-                        class="w-12 h-12 bg-[#1b0a2c] text-white rounded-full flex items-center justify-center hover:bg-[#b8db3a] transition-colors focus:outline-none">
+                        class="w-12 h-12 bg-[#1b0a2c] text-white rounded-full flex items-center justify-center transition-colors focus:outline-none">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                             </path>
@@ -842,7 +826,7 @@
             <!-- Left Side: FAQs -->
             <div class="w-full lg:w-1/2">
                 <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-8"
-                    style="font-family: Arial, sans-serif;">Frequently Asked Questions</h2>
+                    style="font-family: 'Google Sans', sans-serif;">Frequently Asked Questions</h2>
 
                 <div class="faq-container w-full max-w-full m-0 space-y-4">
                     <!-- Item 1 -->
@@ -987,7 +971,7 @@
             <!-- Text Content -->
             <div class="md:w-1/2 z-10 text-left md:pr-8">
                 <h2 class="text-4xl md:text-[3.5rem] font-extrabold text-gray-900 tracking-tight mb-4 leading-none"
-                    style="font-family: Arial, sans-serif;">
+                    style="font-family: 'Google Sans', sans-serif;">
                     Give Your Pet The Best Care
                 </h2>
                 <p class="text-gray-900 font-medium text-lg mb-8">
@@ -1042,7 +1026,7 @@
                                     d="M12 14c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm-5.5-3c-.83 0-1.5-.67-1.5-1.5S5.67 8 6.5 8s1.5.67 1.5 1.5S7.33 11 6.5 11zm11 0c-.83 0-1.5-.67-1.5-1.5S16.67 8 17.5 8s1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5z" />
                             </svg>
                             <span class="font-extrabold text-white text-3xl tracking-tight"
-                                style="font-family: Arial, sans-serif;">PETCARE.</span>
+                                style="font-family: 'Google Sans', sans-serif;">PETCARE.</span>
                         </a>
 
                         <p class="text-sm text-gray-400 max-w-sm leading-relaxed font-medium">
@@ -1052,28 +1036,28 @@
                         <!-- Social Icons -->
                         <div class="flex gap-3">
                             <a href="#"
-                                class="w-10 h-10 rounded-lg border border-gray-800 flex items-center justify-center hover:bg-[#b8db3a] hover:text-gray-900 hover:border-transparent transition-all">
+                                class="w-10 h-10 rounded-lg border border-gray-800 flex items-center justify-center hover:text-gray-900 hover:border-transparent transition-all">
                                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                                     <path
                                         d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
                                 </svg>
                             </a>
                             <a href="#"
-                                class="w-10 h-10 rounded-lg border border-gray-800 flex items-center justify-center hover:bg-[#b8db3a] hover:text-gray-900 hover:border-transparent transition-all">
+                                class="w-10 h-10 rounded-lg border border-gray-800 flex items-center justify-center hover:text-gray-900 hover:border-transparent transition-all">
                                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                                     <path
                                         d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
                                 </svg>
                             </a>
                             <a href="#"
-                                class="w-10 h-10 rounded-lg border border-gray-800 flex items-center justify-center hover:bg-[#b8db3a] hover:text-gray-900 hover:border-transparent transition-all">
+                                class="w-10 h-10 rounded-lg border border-gray-800 flex items-center justify-center hover:text-gray-900 hover:border-transparent transition-all">
                                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                                     <path
                                         d="M12.3 22h-.1c-5.4 0-9.7-4.3-9.7-9.7 0-3.3 1.7-6.4 4.5-8.1 1-.6 2.2-.4 2.8.6.6 1 .4 2.2-.6 2.8-1.8 1.1-2.9 3.1-2.9 5.2 0 3.6 2.9 6.5 6.5 6.5 3.3 0 6.1-2.4 6.5-5.7.1-1.1 1.1-1.9 2.2-1.8 1.1.1 1.9 1.1 1.8 2.2-.6 4.9-4.8 8.5-9.8 8.5z" />
                                 </svg>
                             </a>
                             <a href="#"
-                                class="w-10 h-10 rounded-lg border border-gray-800 flex items-center justify-center hover:bg-[#b8db3a] hover:text-gray-900 hover:border-transparent transition-all">
+                                class="w-10 h-10 rounded-lg border border-gray-800 flex items-center justify-center hover:text-gray-900 hover:border-transparent transition-all">
                                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                                     <path
                                         d="M23.95 4.57a10 10 0 0 1-2.82.77 4.96 4.96 0 0 0 2.16-2.72 9.9 9.9 0 0 1-3.12 1.19 4.92 4.92 0 0 0-8.39 4.48A13.98 13.98 0 0 1 1.67 3.15 4.93 4.93 0 0 0 3.2 9.72a4.9 4.9 0 0 1-2.23-.62v.06a4.93 4.93 0 0 0 3.95 4.83 4.86 4.86 0 0 1-2.22.08 4.93 4.93 0 0 0 4.6 3.42A9.87 9.87 0 0 1 0 19.54a13.94 13.94 0 0 0 7.55 2.21c9.06 0 14-7.5 14-14v-.64a10.08 10.08 0 0 0 2.4-2.54z" />
@@ -1129,7 +1113,7 @@
                 <!-- Bottom Line -->
                 <div
                     class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs font-medium text-gray-500">
-                    <p class="mb-4 md:mb-0">©copyright 2026 PetCare. All Rights Reserved</p>
+                    <p class="mb-4 md:mb-0">Â©copyright 2026 PetCare. All Rights Reserved</p>
                     <div class="flex gap-8">
                         <a href="#" class="hover:text-white transition-colors">Terms & Conditions of Use</a>
                         <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
